@@ -1,0 +1,49 @@
+<%= form_with(model: album, local: true) do |form| %>
+  <% if album.errors.any? %>
+  <div id="error_explanation">
+  <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
+  <ul><% album.errors.full_messages.each do |message| %>
+    <div class= "alert alert-danger alert-dismissible fade show" role="alert""><%= message %>
+    <% end %>
+  </ul>
+  </div>
+  <% end %>
+  <div>
+  <%=form.label :title%>
+  <%=form.text_field :title,class:'form-control'%>
+  </div>
+  <br>
+  <div>
+  <%=form.label :cover_image%>
+  <%=form.file_field :cover_image,class:'form-control'%>
+  </div>
+  <br>
+  <div>
+  <%=form.label :description%>
+  <%=form.text_area :description,class:'form-control'%>
+  </div>
+  <br>
+  <div>
+  <%=form.label :images%> 
+  <%=form.file_field :images,class:'form-control',:multiple => true%>
+  </div>
+  <br>
+  <div>
+  <%=form.label :publish%>
+  <%=form.check_box :publish%>
+  </div>
+  <br>
+  <div>
+  <%=form.label :tag %>
+  <%=form.text_area :all_tags, class:'form-control' %>
+  </div>
+  <div>
+  <%=form.submit%>
+  </div>
+  <%end%>
+
+    
+    
+  
+
+     

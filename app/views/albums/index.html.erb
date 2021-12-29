@@ -1,0 +1,30 @@
+<h1 class="p-1">Albums <small class="pull-right"> <%= link_to "Add New Album", new_album_path, class: "btn btn-primary" %>
+</small>
+</h1>
+<div class="container-fluid">
+<div class="row">
+<% @albums.each do |album| %>
+  <div class="col-md-4 col-sm-12">
+  <div class="card">
+  <div class="card-header text-center">
+  <b><%=album.title%></b>
+  <%= link_to album,method: :delete, data: { confirm: "Are you sure?" } do %>
+    <i class="fas fa-times"></i>
+    <%end %>
+  </div>
+  <div class="card-body">
+  <%= link_to album do %>
+    <% if album.cover_image.attached? %>
+    <%= image_tag(album.cover_image, class: "card-top-img img-fluid") %>
+    <% end %>
+    </div>
+    <% end %>
+    <div class="card-footer text-center">
+    <p><strong>Published On: </strong><span class="text-muted"><%= album.created_at.to_s.split(' ')[0] %></span></p>
+    <p><strong>Last Updated: </strong><span class="text-muted"><%= album.updated_at.to_s.split(' ')[0] %></span></p>
+    </div>
+    </div>
+    </div>
+    <% end %>
+    </div>
+</div>

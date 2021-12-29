@@ -1,0 +1,36 @@
+<div class="container mt-3">
+<%= search_form_for @q, url: search_home_index_path,html: { method: :post } do |f| %>
+  <%= f.search_field :tags_name_eq %> 
+  <%=f.submit "search" %> <% end %>
+  </div>
+  <div class="mt-4"><h1>All Published Albums <small class="pull-right"> 
+</small></h1>
+<div class="container-fluid">
+<div class="row">
+<% @albums.each do |album| %>
+  <% if album.publish? %>
+  <div class="col-md-3 col-sm-12">
+  <div class="card">
+  <div class="card-header text-center">
+  <%= album.title %>
+  </div>
+  <div class="card-body">
+  <% if album.cover_image.attached? %>
+  <%= image_tag(album.cover_image, class: "card-top-img img-fluid") %>
+  <% end %>
+  <p><strong>Published by: </strong><%=album.user.email.split('@')[0] %></p>
+  <p class="mt-2"><strong>Published On: </strong><span class="text-muted"><%= album.created_at.to_s.split(' ')[0] %></span></p>
+  <p><strong>Last Updated: </strong><span class="text-muted"><%= album.updated_at.to_s.split(' ')[0] %></span></p>
+  </div>
+  <div class="text-center">
+  <p><%=  album.all_tags%> </p>
+  </div>
+  <div class="card-footer text-center">
+  <%= link_to "Show", home_path(album.id), class: "btn btn-warning" %>
+  </div>
+  </div>
+  </div>
+  <% end %>
+  <% end %>
+  </div>
+</div>

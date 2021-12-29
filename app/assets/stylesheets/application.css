@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body {
+    background-image: linear-gradient(to right, rgb(253, 253, 255), rgb(253, 243, 243));
+  }
+
+ .nav .navbar-nav a:link{
+    text-decoration: none;
+}
+
+h1 ,h2{
+border-left: 5px #666 solid;
+border-bottom:1px #666 solid ;
+padding: 0 0 5px;
+margin-bottom: 30px;
+}
+.pull-right{
+    float: right;
+}
+.col-md-4 {
+    margin-top:2vmin;
+
+}
+.col-md-4 .card-body img{
+    height:30vmin;
+    width:40vmin;
+}
+.col-md-3 {
+    margin-top:2vmin;
+
+}
+.col-md-3 .card-body img{
+    height:25vmin;
+    width: 27vmin;
+}
+
+@media (min-width: 280px) and (max-width:653px){
+    .col-md-4 {
+        margin-top:2vmin;
+    
+    }
+    .col-md-4 .card-body img{
+        height:60vmin;
+        width: 70vmin;
+    
+    }
+    .col-md-3 {
+        margin-top:2vmin;
+    
+    }
+    .col-md-3 .card-body img{
+        height:50vmin;
+    }
+    .card{
+        width: 80vmin;
+        margin-top:9vmin;
+    }
+
+}
+
+
+  i{
+    color: gray;
+    font-size:3vmin;
+    float: right;
+}
+
+
+  
+
+
