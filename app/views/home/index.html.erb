@@ -1,11 +1,63 @@
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="https://wallpaperaccess.com/full/300068.jpg" class="d-block w-100" alt="flower">
+        <div class="carousel-caption ">
+        <div class="greeting-wrapper">
+        <h2>All Published Albums</h2>
+      </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIK72R03NslQuLkcwbyAz9bOjXEIQIGsUbGslJb5vXYHIW_LMC&usqp=CAU" class="d-block w-100" alt="flower">
+        <div class="carousel-caption">
+        <div class="greeting-wrapper">
+        <h2>All Published Albums</h2>
+      </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIK72R03NslQuLkcwbyAz9bOjXEIQIGsUbGslJb5vXYHIW_LMC&usqp=CAU" class="d-block w-100" alt="flower">
+        <div class="carousel-caption ">
+        <div class="greeting-wrapper">
+        <h2>All Published Albums</h2>
+      </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIK72R03NslQuLkcwbyAz9bOjXEIQIGsUbGslJb5vXYHIW_LMC&usqp=CAU" class="d-block w-100" alt="flower">
+        <div class="carousel-caption ">
+        <div class="greeting-wrapper">
+        <h2>All Published Albums</h2>
+      </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>
 <div class="container mt-3">
 <%= search_form_for @q, url: search_home_index_path,html: { method: :post } do |f| %>
   <%= f.search_field :tags_name_eq %> 
   <%=f.submit "search" %> <% end %>
   </div>
-  <div class="mt-4"><h1>All Published Albums <small class="pull-right"> 
+<small class="pull-right"> 
 </small></h1>
-<div class="container-fluid">
+<div class="container">
 <div class="row">
 <% @albums.each do |album| %>
   <% if album.publish? %>
@@ -34,3 +86,35 @@
   <% end %>
   </div>
 </div>
+<footer class="text-center text-lg-start bg-dark text-muted mt-3 ">
+<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom ">
+  <div class="me-5 d-none d-lg-block ">
+    <span class="animate ">Get connected with us on social networks:</span>
+  </div>
+  <div class="mx-2 ">
+    <ul>
+      <li class="list-inline-item ">
+        <a class="text-muted " href="#! "><i class="bi bi-facebook me-3 " style="color:#3b5998 "></i></a>
+      </li>
+      <li class="list-inline-item ">
+        <a class="text-muted " href="#! "><i class="bi bi-twitter me-3 " style="color:#1da1f2 "></i></a>
+      </li>
+      <li class="list-inline-item ">
+        <a class="text-muted " href="# "><i class="bi bi-youtube me-3 " style="color: #db4a39; "></i></a>
+      </li>
+      <li class="list-inline-item ">
+        <a class="text-muted " href="#! "><i class="bi bi-google me-3 " style="color: #db4a39; "></i></a>
+      </li>
+      <li class="list-inline-item ">
+        <a class="text-muted " href="#! "><i class="bi bi-instagram me-3 " style="color:#bc2a8d "></i></a>
+      </li>
+      <li class="list-inline-item ">
+        <a class="text-muted " href="#! "><i class="bi bi-github me-3 " style="color:#0e76a8 "></i></a>
+      </li>
+    </ul>
+  </div>
+</section>
+<div class="text-center p-4 " style="background-color: rgba(0, 0, 0, 0.05); "><span>© 2021 Copyright:</span>
+  <a class="text-reset fw-bold " href="# ">FLOWERS</a>
+</div>
+</footer>

@@ -1,7 +1,8 @@
+<div class="container mt-2">
 <h1 class="p-1">Albums <small class="pull-right"> <%= link_to "Add New Album", new_album_path, class: "btn btn-primary" %>
 </small>
 </h1>
-<div class="container-fluid">
+
 <div class="row">
 <% @albums.each do |album| %>
   <div class="col-md-4 col-sm-12">

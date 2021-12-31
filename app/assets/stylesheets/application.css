@@ -77,6 +77,39 @@ margin-top: 2%;
     font-size:3vmin;
     float: right;
 }
+.d-block{
+    height: 40rem;
+  }
+  .greeting-wrapper h2 {
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-animation: text 6s steps(22) infinite alternate;
+            animation: text 6s steps(22) infinite alternate;
+    margin: auto;
+    border-right: 2px solid black;
+    font-size: 45px;
+  }
+  
+  @-webkit-keyframes text {
+    0% {
+      width: 0ch;
+    }
+    50% {
+      width: 22ch;
+    }
+  }
+  
+  @keyframes text {
+    0% {
+      width: 0ch;
+    }
+    50% {
+      width: 22ch;
+    }
+  }
+
+
 
 
   
