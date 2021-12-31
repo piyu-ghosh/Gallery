@@ -26,6 +26,7 @@ border-left: 5px #666 solid;
 border-bottom:1px #666 solid ;
 padding: 0 0 5px;
 margin-bottom: 30px;
+margin-top: 2%;
 }
 .pull-right{
     float: right;
@@ -36,7 +37,7 @@ margin-bottom: 30px;
 }
 .col-md-4 .card-body img{
     height:30vmin;
-    width:40vmin;
+ 
 }
 .col-md-3 {
     margin-top:2vmin;
@@ -44,7 +45,7 @@ margin-bottom: 30px;
 }
 .col-md-3 .card-body img{
     height:25vmin;
-    width: 27vmin;
+   
 }
 
 @media (min-width: 280px) and (max-width:653px){
@@ -54,7 +55,6 @@ margin-bottom: 30px;
     }
     .col-md-4 .card-body img{
         height:60vmin;
-        width: 70vmin;
     
     }
     .col-md-3 {
