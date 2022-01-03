@@ -8,7 +8,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="10000">
-        <img src="https://wallpaperaccess.com/full/300068.jpg" class="d-block w-100" alt="flower">
+        <img src="https://wallpaperaccess.com/full/199606.jpg" class="d-block w-100" alt="flower">
         <div class="carousel-caption ">
         <div class="greeting-wrapper">
         <h2>All Published Albums</h2>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIK72R03NslQuLkcwbyAz9bOjXEIQIGsUbGslJb5vXYHIW_LMC&usqp=CAU" class="d-block w-100" alt="flower">
+        <img src="https://images.unsplash.com/photo-1533094692971-5f4c56ec1339?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80" class="d-block w-100" alt="flower">
         <div class="carousel-caption">
         <div class="greeting-wrapper">
         <h2>All Published Albums</h2>
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIK72R03NslQuLkcwbyAz9bOjXEIQIGsUbGslJb5vXYHIW_LMC&usqp=CAU" class="d-block w-100" alt="flower">
+        <img src="http://xdesktopwallpapers.com/wp-content/uploads/2014/01/Reflection-Of-Mountains-In-Water-Looking-Beautiful.jpg" class="d-block w-100" alt="flower">
         <div class="carousel-caption ">
         <div class="greeting-wrapper">
         <h2>All Published Albums</h2>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIK72R03NslQuLkcwbyAz9bOjXEIQIGsUbGslJb5vXYHIW_LMC&usqp=CAU" class="d-block w-100" alt="flower">
+        <img src="https://i.ytimg.com/vi/u8_JTzSSOIM/maxresdefault.jpg" class="d-block w-100" alt="flower">
         <div class="carousel-caption ">
         <div class="greeting-wrapper">
         <h2>All Published Albums</h2>
@@ -70,12 +70,12 @@
   <% if album.cover_image.attached? %>
   <%= image_tag(album.cover_image, class: "card-top-img img-fluid") %>
   <% end %>
-  <p><strong>Published by: </strong><%=album.user.email.split('@')[0] %></p>
+  <p class="mt-2"><strong>Published by: </strong><%=album.user.email.split('@')[0] %></p>
   <p class="mt-2"><strong>Published On: </strong><span class="text-muted"><%= album.created_at.to_s.split(' ')[0] %></span></p>
   <p><strong>Last Updated: </strong><span class="text-muted"><%= album.updated_at.to_s.split(' ')[0] %></span></p>
   </div>
   <div class="text-center">
-  <p><%=  album.all_tags%> </p>
+  <p class="text-muted"><strong>Tags: </strong><%=  album.all_tags%> </p>
   </div>
   <div class="card-footer text-center">
   <%= link_to "Show", home_path(album.id), class: "btn btn-warning" %>
@@ -86,35 +86,3 @@
   <% end %>
   </div>
 </div>
-<footer class="text-center text-lg-start bg-dark text-muted mt-3 ">
-<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom ">
-  <div class="me-5 d-none d-lg-block ">
-    <span class="animate ">Get connected with us on social networks:</span>
-  </div>
-  <div class="mx-2 ">
-    <ul>
-      <li class="list-inline-item ">
-        <a class="text-muted " href="#! "><i class="bi bi-facebook me-3 " style="color:#3b5998 "></i></a>
-      </li>
-      <li class="list-inline-item ">
-        <a class="text-muted " href="#! "><i class="bi bi-twitter me-3 " style="color:#1da1f2 "></i></a>
-      </li>
-      <li class="list-inline-item ">
-        <a class="text-muted " href="# "><i class="bi bi-youtube me-3 " style="color: #db4a39; "></i></a>
-      </li>
-      <li class="list-inline-item ">
-        <a class="text-muted " href="#! "><i class="bi bi-google me-3 " style="color: #db4a39; "></i></a>
-      </li>
-      <li class="list-inline-item ">
-        <a class="text-muted " href="#! "><i class="bi bi-instagram me-3 " style="color:#bc2a8d "></i></a>
-      </li>
-      <li class="list-inline-item ">
-        <a class="text-muted " href="#! "><i class="bi bi-github me-3 " style="color:#0e76a8 "></i></a>
-      </li>
-    </ul>
-  </div>
-</section>
-<div class="text-center p-4 " style="background-color: rgba(0, 0, 0, 0.05); "><span>© 2021 Copyright:</span>
-  <a class="text-reset fw-bold " href="# ">FLOWERS</a>
-</div>
-</footer>

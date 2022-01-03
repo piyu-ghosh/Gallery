@@ -8,6 +8,7 @@ class Album < ApplicationRecord
   validates :title, uniqueness: { case_sensitive: false }
   validates :description, length: { maximum:100, too_long: "%{count} characters is the maximum allowed" }
   validates :title, presence: { message: "must be given please" }
+  before_create { |album| album.title = album.title.capitalize}
   def all_tags=(names)
     self.tags = names.split(',').map do |name|
       Tag.where(name: name).first_or_create!

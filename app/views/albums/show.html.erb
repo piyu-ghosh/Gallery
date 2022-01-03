@@ -1,18 +1,22 @@
 <div class="container">
 <div class="card-header">
-<h4><strong><%= @album.title %></h4>
+<h4><strong><%= @album.title %> <div class="pull-right">
+<%= link_to "Edit", edit_album_path(@album), class:"btn btn-warning mx-2" %> 
+<%= link_to 'Back', albums_path, class: "btn btn-secondary mx-2" %> 
+</div></h4>
 </div>
-<p><%= @album.description%></p>
 <div>
-  <p><%= @album.all_tags%> </p>
+  <p class="text-muted"><%= @album.all_tags%> </p>
   </div>
   <div class="row">
   <% @album.images.each do |image| %>
     <div class="col-md-3 col-sm-12">
       <div class="card mt-3">
+      <%= link_to image do %>
         <div class="card-body">
           <p><%= image_tag(image, class: "card-top-img img-fluid") %></p>
         </div>
+          <%end %>
         <div class="card-footer">
         <%= link_to "Delete", delete_image_albums_path(id: image.id),
                     method: :delete, data: { confirm: "Are you sure?" }, class: "nav-link" , class: "btn btn-danger"%>
@@ -20,10 +24,5 @@
       </div>
     </div>
   <% end %>
-</div>
-
-<div class="my-4">
-  <%= link_to "Edit", edit_album_path(@album), class:"btn btn-warning mx-2" %> 
-  <%= link_to 'Back', albums_path, class: "btn btn-secondary mx-2" %> 
 </div>
 </div>
