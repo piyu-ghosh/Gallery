@@ -74,8 +74,8 @@
   <p class="mt-2"><strong>Published On: </strong><span class="text-muted"><%= album.created_at.to_s.split(' ')[0] %></span></p>
   <p><strong>Last Updated: </strong><span class="text-muted"><%= album.updated_at.to_s.split(' ')[0] %></span></p>
   </div>
-  <div class="text-center">
-  <p class="text-muted"><strong>Tags: </strong><%=  album.all_tags%> </p>
+  <div class="mx-2 text-truncate">
+  <p class="text-muted "><strong>Tags: </strong><%=  album.all_tags%> </p>
   </div>
   <div class="card-footer text-center">
   <%= link_to "Show", home_path(album.id), class: "btn btn-warning" %>

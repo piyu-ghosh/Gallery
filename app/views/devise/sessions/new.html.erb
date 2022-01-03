@@ -1,23 +1,20 @@
 <div class="container mt-2">
 <h2>Log In</h2>
 <div class="container rounded-lg shadow-lg" style="padding:30px">
-    <div class="row pt-4">
-        <div class="col-2-flex">
-            <!--left side space-->
-            <ul class="list-group rounded-lg">
-                <li class="list-group-item list-group-item-dark active font-weight-bold">Features Available</li>
-                <li class="list-group-item list-group-item-dark">Sign Up</li>
-                <li class="list-group-item list-group-item-dark">Sign In</li>
-                <li class="list-group-item list-group-item-dark">Upload</li>
-                <li class="list-group-item list-group-item-dark">Save</li>
-                <li class="list-group-item list-group-item-dark">View</li>
-                <li class="list-group-item list-group-item-dark">Edit</li>
-                <li class="list-group-item list-group-item-dark">Delete</li>
-            </ul>
-        </div>
-
-       
-        <div class=" col col-3 rounded-lg bg-light shadow mr-3rem pb-3"><br>
+<div class="row pt-4">
+<div class="col-2-flex">
+<!--left side space-->
+<ul class="list-group rounded-lg">
+<li class="list-group-item list-group-item-dark active font-weight-bold">Features Available</li>
+<li class="list-group-item list-group-item-dark">Sign Up</li>
+<li class="list-group-item list-group-item-dark">Upload</li>
+<li class="list-group-item list-group-item-dark">Save</li>
+<li class="list-group-item list-group-item-dark">View</li>
+<li class="list-group-item list-group-item-dark">Edit</li>
+<li class="list-group-item list-group-item-dark">Delete</li>
+</ul>
+</div>
+<div class=" col col-3 rounded-lg bg-light  shadow mx-5rem pb-3"><br>
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="field">
                 <%= f.label :email %><br />
