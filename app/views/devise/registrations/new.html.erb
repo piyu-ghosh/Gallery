@@ -1,57 +1,42 @@
 <div class="container mt-2">
 <h2>Sign up</h2>
 <div class="container rounded-lg shadow-lg" style="padding:30px">
-    <div class="row pt-4">
-        <div class="col-2-flex">
-            <!--left side space-->
-            <ul class="list-group rounded-lg">
-                <li class="list-group-item list-group-item-dark active font-weight-bold">Features Available</li>
-                <li class="list-group-item list-group-item-dark">Sign In</li>
-                <li class="list-group-item list-group-item-dark">Upload</li>
-                <li class="list-group-item list-group-item-dark">Save</li>
-                <li class="list-group-item list-group-item-dark">View</li>
-                <li class="list-group-item list-group-item-dark">Edit</li>
-                <li class="list-group-item list-group-item-dark">Delete</li>
-            </ul>
-        </div>
-
-        <div class="col col-3 rounded-lg bg-light shadow-lg mr-3rem "><br>
-            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <div class="field pt-2">
-                <%= f.label :email %><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-            </div>
-
-            <div class="field pt-2">
-                <%= f.label :password %>
-                <% if @minimum_password_length %>
-
-                (<%= @minimum_password_length %> characters minimum)
-
-                <% end %><br />
-                <%= f.password_field :password, autocomplete: "new-password" %>
-            </div>
-
-            <div class="field pt-2">
-                <%= f.label :password_confirmation %><br />
-                <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-            </div>
-
-
-            <div class="actions pt-3 pb-3">
-                <%= f.submit "Sign up" %>
-            </div>
-
-            <% end %>
-
-
-
-
-
-        </div>
-
-
-
-    </div>
+<div class="row pt-4">
+<div class="col-2-flex">
+<!--left side space-->
+<ul class="list-group rounded-lg">
+<li class="list-group-item list-group-item-dark active font-weight-bold">Features Available</li>
+<li class="list-group-item list-group-item-dark">Sign In</li>
+<li class="list-group-item list-group-item-dark">Upload</li>
+<li class="list-group-item list-group-item-dark">Save</li>
+<li class="list-group-item list-group-item-dark">View</li>
+<li class="list-group-item list-group-item-dark">Edit</li>
+<li class="list-group-item list-group-item-dark">Delete</li>
+</ul>
+</div>
+<div class="col col-3 rounded-lg bg-light shadow-lg mr-3rem "><br>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="field pt-2">
+<%= f.label :email %><br />
+<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+</div>
+<div class="field pt-2">
+<%= f.label :password %>
+<% if @minimum_password_length %>
+(<%= @minimum_password_length %> characters minimum)
+<% end %>
+<br />
+<%= f.password_field :password, autocomplete: "new-password" %>
+</div>
+<div class="field pt-2">
+<%= f.label :password_confirmation %><br />
+<%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+</div>
+<div class="actions pt-3 pb-3">
+<%= f.submit "Sign up" %>
+</div>
+<% end %>
+</div>
+</div>
 </div>
 </div>
