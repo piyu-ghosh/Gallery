@@ -68,7 +68,9 @@
   </div>
   <div class="card-body">
   <% if album.cover_image.attached? %>
-  <%= image_tag(album.cover_image, class: "card-top-img img-fluid") %>
+    <div style="width:400px; height:200px" class="card-top-img img-fluid">
+    <%= image_tag(album.cover_image, style: "width:100%; height:100%") %>
+    </div>
   <% end %>
   <p class="mt-2"><strong>Published by: </strong><%=album.user.email.split('@')[0] %></p>
   <p class="mt-2"><strong>Published On: </strong><span class="text-muted"><%= album.created_at.to_s.split(' ')[0] %></span></p>

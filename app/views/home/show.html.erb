@@ -11,7 +11,9 @@
       <div class="card mt-2">
       <%= link_to image do %>
         <div class="card-body">
-          <p><%= image_tag(image, class: "card-top-img img-fluid") %></p>
+        <div style="width:400px; height:200px" class="card-top-img img-fluid">
+        <%= image_tag(image,style: "width:100%; height:100%" ) %>
+        </div>
         </div>
         <% end %>
         <div class="text-center text-truncate">
