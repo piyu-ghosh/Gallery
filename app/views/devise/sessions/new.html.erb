@@ -14,7 +14,8 @@
 <li class="list-group-item list-group-item-dark">Delete</li>
 </ul>
 </div>
-<div class=" col col-3 rounded-lg bg-light  shadow mx-5rem pb-3"><br>
+<div class="row d-flex justify-content-center align-items-center h-100">
+<div class="col-12 col-md-9 col-lg-7 col-xl-6"><br>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
   <%= f.label :email %><br />
@@ -31,12 +32,15 @@
   <%= f.check_box :remember_me %>
   <%= f.label :remember_me %>
   <% end %>
-  </div>
+  </div> 
   <div class="actions mb-2">
   <%= f.submit "Log in" %>
   </div>
+  <a href="/users/sign_up">sing up</a>
   <% end %>
+  
   <a href="/users/password/new">Forgot your password?</a>
+</div>
 </div>
 </div>
 </div>

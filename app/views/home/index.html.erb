@@ -13,6 +13,11 @@
         <div class="greeting-wrapper">
         <h2>All Published Albums</h2>
       </div>
+      <div class="container mt-3">
+<%= search_form_for @q, url: search_home_index_path,html: { method: :post } do |f| %>
+  <%= f.search_field :title_or_tags_name_eq%> 
+  <%=f.submit "search" %> <% end %>
+  </div>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
@@ -21,6 +26,11 @@
         <div class="greeting-wrapper">
         <h2>All Published Albums</h2>
       </div>
+      <div class="container mt-3">
+<%= search_form_for @q, url: search_home_index_path,html: { method: :post } do |f| %>
+  <%= f.search_field :title_or_tags_name_eq %> 
+  <%=f.submit "search" %> <% end %>
+  </div>
         </div>
       </div>
       <div class="carousel-item">
@@ -29,6 +39,11 @@
         <div class="greeting-wrapper">
         <h2>All Published Albums</h2>
       </div>
+      <div class="container mt-3">
+<%= search_form_for @q, url: search_home_index_path,html: { method: :post } do |f| %>
+  <%= f.search_field :title_or_tags_name_eq%> 
+  <%=f.submit "search" %> <% end %>
+  </div>
         </div>
       </div>
       <div class="carousel-item">
@@ -37,6 +52,11 @@
         <div class="greeting-wrapper">
         <h2>All Published Albums</h2>
       </div>
+      <div class="container mt-3">
+<%= search_form_for @q, url: search_home_index_path,html: { method: :post } do |f| %>
+  <%= f.search_field :title_or_tags_name_eq %> 
+  <%=f.submit "search" %> <% end %>
+  </div>
         </div>
       </div>
     </div>
@@ -50,13 +70,6 @@
     </button>
   </div>
   </div>
-<div class="container mt-3">
-<%= search_form_for @q, url: search_home_index_path,html: { method: :post } do |f| %>
-  <%= f.search_field :tags_name_eq %> 
-  <%=f.submit "search" %> <% end %>
-  </div>
-<small class="pull-right"> 
-</small></h1>
 <div class="container">
 <div class="row">
 <% @albums.each do |album| %>
